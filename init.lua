@@ -346,6 +346,14 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- Convenience Keys
+vim.keymap.set('i', 'jk', '<esc>', { desc = "Exit from insert mode" })
+vim.keymap.set('i', '<C-k>', '<C-o>gk', { desc = "Move up in insert mode" })
+vim.keymap.set('i', '<C-h>', '<left>', { desc = "Move left in insert mode" })
+vim.keymap.set('i', '<C-l>', '<right>', { desc = "Move right in insert mode" })
+vim.keymap.set('i', '<C-j>', '<C-o>gj', { desc = "Move down in insert mode" })
+
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
